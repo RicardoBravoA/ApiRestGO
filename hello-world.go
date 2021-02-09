@@ -17,6 +17,8 @@ func main() {
 	var video = getVideo("User 0", "Woz", "Description 0")
 
 	fmt.Println(video)
+
+	fmt.Println(delivery(5))
 }
 
 func getVideo(name string, user string, description string) Video {
@@ -25,4 +27,19 @@ func getVideo(name string, user string, description string) Video {
 		name:        name,
 		user:        user,
 		description: description}
+}
+
+
+// closures
+func delivery(items int) (string, float32) {
+
+	const price float32 = 10
+
+	//closure
+	total := func() float32 {
+		return float32(items) * price
+	}
+
+	return "The total is:", total()
+
 }
