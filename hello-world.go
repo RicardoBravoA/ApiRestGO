@@ -3,6 +3,7 @@ package main
 // For print
 import "fmt"
 
-func main(){
+// go fmt hello-world.go format file
+func main() {
 	fmt.Println("Hello World from GO")
 }
